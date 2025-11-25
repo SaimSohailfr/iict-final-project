@@ -1,0 +1,296 @@
+/*Importing Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exile&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+header{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/swimming-pool.jpg);
+background-position: center;
+background-size: cover;
+height: 100vh;
+
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+text-decoration: none;
+color: #fff;
+padding: 5px 15px;
+border: 1px solid transparent;
+transition: 0.6s ease ;
+font-size: 15px;
+}
+ul li a:hover {
+    background-color: rgba(128, 128, 128, 1.2); /* translucent gray */
+    color: #fff; /* keep text white */
+    border-radius: 5cm; /* keep original shape */
+    font-weight: 200;
+}
+
+
+.logo img{
+    float: left;
+    width: 120px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: rgba(0, 0, 0, 0.5); /* fallback color */
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Active link styling */
+.nav-links li.active a {
+    border-bottom: 2px solid #fff;
+}
+
+
+
+
+
+.join-but {
+    background-color: #1b365d;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding-left: 30.6px;
+    padding-right: 30.6px;
+    padding-top: 13.6px;
+    padding-bottom: 13.6px;
+    margin-top:20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-but:hover {
+    background-color: white;
+    color: #1b365d;
+    border: 2px solid #1b365d;
+}
+
+
+
+.split-container {
+     max-width: 1200px;              
+    margin: 40px auto;             
+    border: 1px solid #ccc;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* Top Half - Shows background image */
+.top-half {
+    height: 350px;
+    overflow: hidden;
+}
+.top-half img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+}
+
+/* Bottom Half - Text and Button */
+.bottom-half {
+    height: 250px;
+    background-color: #eaf1f4;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.bottom-text {
+    font-size: 2rem;
+    color: #1b365d;
+    font-family: "Lora", serif;
+    margin-bottom: 20px;
+}
+.bottom-desc{
+    font-size: 18px;
+    color: #000000;
+    font-family: "Lora", serif;
+    margin-top: 0 auto;
+}
+
+/*Carousel*/
+.membership-container {
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: relative;
+}
+
+
+
+.mem-text {
+    font-size: 3rem;
+    color: #1b365d;
+    font-weight:Bolder ;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* space between images and buttons */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track a {
+    flex: 0 0 33.3333%; /* 3 items per view */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.carousel-btn {
+    background-color: rgba(27, 54, 93, 0.7);
+    color: white;
+    border: none;
+    padding: 25px;
+    width: 70px;       /* Equal width and height */
+    height: 70px;
+    cursor: pointer;
+    font-size: 36px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+} */
+
+.carousel-btn:hover {
+    background-color: rgba(27, 54, 93, 1);
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+header {
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+  z-index: 10; /* ensure it sits above the background */
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,368 @@
+/* Reset and base styles */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    
+header{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/courtney-cook-SsIIw_MET0E-unsplash.jpg);
+background-position: center;
+background-size: cover;
+height: 100vh;
+
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+text-decoration: none;
+color: #fff;
+padding: 5px 15px;
+border: 1px solid transparent;
+transition: 0.6s ease ;
+}
+ul li a:hover {
+    background-color: rgba(128, 128, 128, 1.2); /* translucent gray */
+    color: #fff; /* keep text white */
+    border-radius: 5cm; /* keep original shape */
+    font-weight: 200;
+}
+
+
+.logo img{
+    float: left;
+    width: 120px;
+    height: auto;
+}
+.main{
+max-width: 1500px;
+}
+ul li.acitve a{
+    background-color: #5a4444;
+    color: #000;
+}
+.title{
+    position: absolute;
+    padding-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.title h1{
+    font-size: 45px;
+    color: #fff;
+}
+.title p {
+    padding-top: 20px;
+    font-size: 20px;
+    color: rgba(241, 235, 235, 0.8);
+    font-weight: bold;
+    text-align: center;
+    margin: 0; /* Added to remove default margin */
+    padding-left: 20px; /* Adjust padding to control space */
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+    overflow: hidden; /* Clear the float */
+}
+
+
+#about-us {
+    padding: 50px;
+    background-color: hsla(38, 10%, 79%, 0.521); /* Set background color as needed */
+    padding: 50px 0; /* Adjust padding as needed */
+    
+}
+
+#about-us .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about-us .content {
+    width: 50%; /* Adjust width as needed */
+}
+
+#about-us h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #333; /* Set text color as needed */
+}
+
+#about-us p {
+    padding: auto;
+    color: #666; /* Set text color as needed */
+    font-size: large;
+}
+
+#about-us .image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 40%; /* Adjust width as needed */
+
+}
+
+#about-us img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add border-radius for rounded corners as needed */
+    border-color: #f1f0ebec;
+    display: flex;
+background-color: transparent;
+border-radius: 20px;
+box-shadow: 1px 1px 20px rgb(57, 122, 243),
+            1px 1px 40px rgb(95, 212, 248);
+animation: anime 1s linear infinite;
+}
+
+.PlanHeading {
+  color: #0b0b0c;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 0;
+  margin: 0 auto;          /* center block-level elements if needed */
+  width: 100%;             /* ensures full width to align text */
+}
+
+/* MEMBERSHIP SECTION CONTAINER */
+.membership-cards {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden; /* 🔒 Prevents scroll bar from showing */
+}
+
+/* SLIDER WRAPPER */
+.slider {
+  width: 1100px;
+  overflow: visible; /* 🔓 Needed for card flip space */
+}
+
+/* FLEX TRACK FOR SLIDING */
+.cards-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* CARD CONTAINER */
+.container {
+  flex: 0 0 350px;
+  height: 500px;
+  perspective: 1500px; /* 🎯 Stronger perspective improves flip effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+
+/* ACTUAL CARD */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  margin-bottom: 20px;
+}
+
+
+/* FLIP ON HOVER */
+.container:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+/* FRONT & BACK SHARED STYLES */
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* FRONT SIDE */
+.front img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 👇 Gradient overlay */
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); /* adjust alpha if needed */
+  pointer-events: none; /* So hover still works */
+  z-index: 2;
+}
+
+
+.front {
+  background: #f0f0f1;
+}
+
+.card-price {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  z-index: 3;
+  font-size: 1rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+/* BACK SIDE */
+.back {
+  background: rgb(3, 1, 55);
+  transform: rotateY(180deg);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  line-height: 3; 
+}
+
+/* NAV BUTTONS */
+.slider-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.regbutton {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: 400px;               /* Makes the button 200px wide */
+  height: 50px;              /* Makes the button 200px tall, so it forms a square */
+  background-color:rgb(3, 1, 55); /* Sets a blue background color */
+  color: white;               /* Makes the text inside white */
+  
+  display: flex;              /* Enables flexbox to center the content */
+  align-items: center;        /* Vertically centers the text */
+  justify-content: center;    /* Horizontally centers the text */
+
+  border-radius: 50px;         /* Rounds the corners slightly (optional) */
+  cursor: pointer;            /* Changes the mouse to a pointer on hover */
+  text-align: center;         /* Aligns text to the center (good fallback) */
+
+  margin: auto;               /* Centers the box horizontally in its parent */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.regbutton:hover {
+  background-color: #0056b3;  /* Darker blue when hovered */
+}
+
+.heading {
+  font-size: 18px;            /* Sets the size of the REGISTER NOW text */
+  font-weight: bold;          /* Makes the text bold */
+}
+
+
+/* Footer Styles */
+.footer {
+  margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+}
